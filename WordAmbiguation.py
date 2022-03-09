@@ -1,7 +1,9 @@
-# This is a test for several word ambiguation methods.
+# This is a test for several word sense disambiguation methods.
 # owner: Xin An
 # reference:
-# Word ambiguation methods including:
-# 1. Bayesian
-# 2. mutual information
-# 3. this
+# Word sense disambiguation methods including:
+# 1. Bayesian classification (supervised disambiguation)
+# 2. information-theoretic approach
+# 3. dictionary-based disambiguation
+# 4. unsupervised disambiguation
+
