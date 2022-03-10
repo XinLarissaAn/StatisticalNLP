@@ -42,6 +42,6 @@ tokenizer.fit_on_texts(sentences)
 word_index = tokenizer.word_index
 sequences = tokenizer.texts_to_sequences(sentences)
 sequences_test = tokenizer.texts_to_sequences(test_data)
-print(sequences)
 print(word_index)
+print(sequences)
 print(sequences_test)
