@@ -1,5 +1,5 @@
-# This is a test for several word sense disambiguation methods.
-# owner: Xin An
+# This is a practice script for data preprocessing using tensrflow
+# reference: tensorflow NLP youtube
 
 #import packages
 import tensorflow as tf

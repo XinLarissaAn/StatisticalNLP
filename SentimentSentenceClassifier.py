@@ -1,5 +1,6 @@
-#This is the script for training and testing on a model to recognize sentiment in text
-#scripter: Xin An
+#This is the script for training and testing
+# on a model to recognize sentiment in text
+
 
 #import library
 import json
@@ -8,3 +9,17 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 #import data
+# reference: rishabhmisra.github.io/publications/
+def parse_data(file):
+    for l in open(file,'r'):
+       yield json.loads(l)
+
+data = list(parse_data('Sarcasm_Headlines_Dataset.json'))
+
+sentences = []
+labels = []
+urls = []
+for item in data:
+   sentences.append(item['headline'])
+   labels.append(item['is_sarcastic'])
+   urls.append(item['article_link'])
