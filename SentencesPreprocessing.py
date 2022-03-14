@@ -5,6 +5,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 #import data
 sentences =[
@@ -45,3 +46,12 @@ sequences_test = tokenizer.texts_to_sequences(test_data)
 print(word_index)
 print(sequences)
 print(sequences_test)
+
+#pad the sequences: fill up the unused portions of a data structure
+padded = pad_sequences(sequences)
+print(padded)
+
+#change the parameter of pad_sequences
+padded = pad_sequences(sequences, padding='post', maxlen=6, truncating='post')
+print(padded)
+
